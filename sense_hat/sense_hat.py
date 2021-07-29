@@ -7,7 +7,7 @@ import time
 import numpy as np
 import shutil
 import glob
-import RTIMU  # custom version
+# import RTIMU  # custom version
 import pwd
 import array
 import fcntl
@@ -30,7 +30,7 @@ class SenseHat(object):
 
     def __init__(
             self,
-            imu_settings_file='RTIMULib',
+#            imu_settings_file='RTIMULib',
             text_assets='sense_hat_text'
         ):
 
@@ -74,22 +74,22 @@ class SenseHat(object):
         )
 
         # Load IMU settings and calibration data
-        self._imu_settings = self._get_settings_file(imu_settings_file)
-        self._imu = RTIMU.RTIMU(self._imu_settings)
-        self._imu_init = False  # Will be initialised as and when needed
-        self._pressure = RTIMU.RTPressure(self._imu_settings)
-        self._pressure_init = False  # Will be initialised as and when needed
-        self._humidity = RTIMU.RTHumidity(self._imu_settings)
-        self._humidity_init = False  # Will be initialised as and when needed
+#        self._imu_settings = self._get_settings_file(imu_settings_file)
+#        self._imu = RTIMU.RTIMU(self._imu_settings)
+#        self._imu_init = False  # Will be initialised as and when needed
+#        self._pressure = RTIMU.RTPressure(self._imu_settings)
+#        self._pressure_init = False  # Will be initialised as and when needed
+#        self._humidity = RTIMU.RTHumidity(self._imu_settings)
+#        self._humidity_init = False  # Will be initialised as and when needed
         self._last_orientation = {'pitch': 0, 'roll': 0, 'yaw': 0}
         raw = {'x': 0, 'y': 0, 'z': 0}
-        self._last_compass_raw = deepcopy(raw)
-        self._last_gyro_raw = deepcopy(raw)
-        self._last_accel_raw = deepcopy(raw)
-        self._compass_enabled = False
-        self._gyro_enabled = False
-        self._accel_enabled = False
-        self._stick = SenseStick()
+#        self._last_compass_raw = deepcopy(raw)
+#        self._last_gyro_raw = deepcopy(raw)
+#        self._last_accel_raw = deepcopy(raw)
+#        self._compass_enabled = False
+#        self._gyro_enabled = False
+#        self._accel_enabled = False
+#        self._stick = SenseStick()
 
     ####
     # Text assets
