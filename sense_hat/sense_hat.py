@@ -38,8 +38,8 @@ class SenseHat(object):
         if self._fb_device is None:
             raise OSError('Cannot detect %s device' % self.SENSE_HAT_FB_NAME)
 
-        if not glob.glob('/dev/i2c*'):
-            raise OSError('Cannot access I2C. Please ensure I2C is enabled in raspi-config')
+#        if not glob.glob('/dev/i2c*'):
+#            raise OSError('Cannot access I2C. Please ensure I2C is enabled in raspi-config')
 
         # 0 is With B+ HDMI port facing downwards
         pix_map0 = np.array([
